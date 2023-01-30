@@ -1,0 +1,244 @@
+<mat-card class="main">
+
+    <mat-card class="main-card double narrow">
+
+        <mat-card class="main-card_single smaller marginBottom15">
+            <mat-card-title>Stwórz nową grupę</mat-card-title>
+
+            <mat-card-content>
+                <form standalone>
+                    <mat-form-field>
+                        <mat-label>Nazwa grupy</mat-label>
+                        <input matInput
+                               placeholder="Nazwa musi być unikalna"
+                               [(ngModel)]="newGroupName"
+                               [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+                </form>
+
+                <button mat-raised-button
+                        color="primary"
+                        [disabled]="!newGroupName"
+                        (click)="createGroup()">Stwórz</button>
+            </mat-card-content>
+
+        </mat-card>
+
+        <mat-card class="main-card_single bigger">
+            <mat-card-title>Dołącz do grupy</mat-card-title>
+            <mat-card-content>
+                <mat-form-field>
+                    <mat-label>Filtruj grupy</mat-label>
+                    <input matInput
+                           (keyup)="applyFilter($event)"
+                           placeholder="Wpisz nazwę"
+                           #input>
+                </mat-form-field>
+                <div class="table-container mat-elevation-z8"
+                     id="smallerTableContainer">
+                    <table mat-table
+                           [dataSource]="dataSource1">
+
+                        <ng-container matColumnDef="nazwa">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Nazwa grupy </th>
+                            <td mat-cell
+                                *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="akcja">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Akcja </th>
+                            <td mat-cell
+                                *matCellDef="let element">
+                                <button mat-raised-button
+                                        (click)="joinGroup(element.id)"
+                                        [disabled]="!element.canUserJoin">
+                                    Dołącz
+                                </button>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row
+                            *matHeaderRowDef="displayedColumns1"></tr>
+                        <tr mat-row
+                            *matRowDef="let row; columns: displayedColumns1;"></tr>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </mat-card>
+
+    <mat-card class="main-card double">
+
+        <mat-card class="main-card_single marginBottom15">
+            <mat-card-title>Twoje grupy</mat-card-title>
+            <mat-card-content>
+                <div class="table-container mat-elevation-z8">
+                    <table mat-table
+                           [dataSource]="dataSource2">
+
+                        <ng-container matColumnDef="nazwa">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Nazwa grupy </th>
+                            <td mat-cell
+                                *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="akcja">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Akcja </th>
+                            <td mat-cell
+                                *matCellDef="let element">
+                                <button mat-raised-button
+                                        [disabled]="element.id == selectedGroupId"
+                                        (click)="selectGroup(element)">
+                                    Wybierz
+                                </button>
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="rola">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Rola </th>
+                            <td mat-cell
+                                *matCellDef="let element">
+                                {{ element.authorId == currentUserId ? 'Admin' : 'Gość'}}
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row
+                            *matHeaderRowDef="displayedColumns2"></tr>
+                        <tr mat-row
+                            *matRowDef="let row; columns: displayedColumns2;"></tr>
+                    </table>
+                </div>
+            </mat-card-content>
+
+        </mat-card>
+
+        <mat-card class="main-card_single">
+            <mat-card-title>Prośby o dołączenie</mat-card-title>
+            <mat-card-content>
+                <div class="table-container mat-elevation-z8">
+                    <table mat-table
+                           [dataSource]="dataSource3">
+
+                        <ng-container matColumnDef="nazwa">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Nazwa grupy </th>
+                            <td mat-cell
+                                *matCellDef="let element"> {{element.groupName}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="dane">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Dane użytkownika </th>
+                            <td mat-cell
+                                *matCellDef="let element"> {{element.userName}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="akcja">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Akcja </th>
+                            <td mat-cell
+                                *matCellDef="let element">
+                                <button mat-raised-button
+                                        (click)="acceptUser(element)">
+                                    Akceptuj
+                                </button>
+                                <button mat-raised-button
+                                        class="marginLeft15"
+                                        (click)="rejectUser(element)">
+                                    Odrzuć
+                                </button>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row
+                            *matHeaderRowDef="displayedColumns3"></tr>
+                        <tr mat-row
+                            *matRowDef="let row; columns: displayedColumns3;"></tr>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </mat-card>
+
+    <mat-card class="main-card double narrow">
+
+        <mat-card class="main-card_single smaller marginBottom15"
+                  id="notificationSettings">
+            <mat-card-title>Skonfiguruj powiadomienie</mat-card-title>
+
+            <mat-card-content>
+                <form>
+                    <mat-form-field>
+                        <mat-label>Tytuł powiadomienia</mat-label>
+                        <input matInput
+                               placeholder="Wpisz tytuł"
+                               [(ngModel)]="notificationTitle"
+                               [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+                    <mat-form-field class="marginLeft15">
+                        <mat-label>Treść powiadomienia</mat-label>
+                        <input matInput
+                               placeholder="Wpisz treść"
+                               [(ngModel)]="notificationContent"
+                               [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+                </form>
+
+                <button mat-raised-button
+                        color="primary"
+                        [disabled]="!selectedGroupName || !notificationTitle || !notificationContent"
+                        (click)="sendAll()">Wyślij wszystkim w
+                    grupie</button>
+            </mat-card-content>
+
+        </mat-card>
+
+        <mat-card class="
+                        main-card_single
+                        bigger">
+            <mat-card-title>Wybrana grupa: {{ selectedGroupName }}</mat-card-title>
+            <mat-card-content>
+                <div class="table-container mat-elevation-z8">
+                    <table mat-table
+                           [dataSource]="dataSource4">
+
+                        <ng-container matColumnDef="dane">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Dane użytkownika </th>
+                            <td mat-cell
+                                *matCellDef="let element"> {{element.name + ' ' + element.lastname}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="akcja">
+                            <th mat-header-cell
+                                *matHeaderCellDef> Akcja </th>
+                            <td mat-cell
+                                *matCellDef="let element">
+                                <button mat-raised-button
+                                        color="primary"
+                                        (click)="sendTo(element)"
+                                        [disabled]="!selectedGroupName || !notificationTitle || !notificationContent">
+                                    Wyślij
+                                </button>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row
+                            *matHeaderRowDef="displayedColumns4"></tr>
+                        <tr mat-row
+                            *matRowDef="let row; columns: displayedColumns4;"></tr>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </mat-card>
+
+</mat-card>

@@ -1,0 +1,84 @@
+<mat-card>
+
+    <mat-card-header>
+        <mat-card-title>Rejestracja</mat-card-title>
+        <mat-card-subtitle>Zarejestruj się jeśli jesteś nowym użytkownikiem</mat-card-subtitle>
+    </mat-card-header>
+
+    <form [formGroup]="registerForm">
+        <mat-form-field>
+            <mat-label>Imię</mat-label>
+            <input matInput
+                   placeholder="Imię"
+                   formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Nazwisko</mat-label>
+            <input matInput
+                   placeholder="Nazwisko"
+                   formControlName="lastname">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Login</mat-label>
+            <input matInput
+                   placeholder="Login"
+                   formControlName="login">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Hasło</mat-label>
+            <input matInput
+                   placeholder="Hasło"
+                   formControlName="password">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Powtórz hasło</mat-label>
+            <input matInput
+                   placeholder="Hasło"
+                   formControlName="password2">
+        </mat-form-field>
+    </form>
+
+    <mat-card-actions>
+        <button mat-raised-button
+                color="primary"
+                (click)="register()"
+                [disabled]="!registerForm.valid">Zarejestruj</button>
+    </mat-card-actions>
+
+</mat-card>
+
+<mat-card>
+
+    <mat-card-header>
+        <mat-card-title>Logowanie</mat-card-title>
+        <mat-card-subtitle>Zaloguj się jeśli masz konto</mat-card-subtitle>
+    </mat-card-header>
+
+    <form [formGroup]="loginForm">
+        <mat-form-field>
+            <mat-label>Login</mat-label>
+            <input matInput
+                   placeholder="Login"
+                   formControlName="login">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Hasło</mat-label>
+            <input matInput
+                   placeholder="Hasło"
+                   formControlName="password">
+        </mat-form-field>
+    </form>
+
+    <mat-card-actions>
+        <button mat-raised-button
+                color="primary"
+                (click)="login()"
+                [disabled]="!loginForm.valid">Zaloguj</button>
+    </mat-card-actions>
+
+</mat-card>

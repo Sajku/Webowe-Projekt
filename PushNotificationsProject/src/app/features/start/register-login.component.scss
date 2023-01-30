@@ -1,0 +1,27 @@
+mat-card {
+    width: 100%;
+    margin-top: 25px;
+    background-color: #ddd;
+
+    mat-card-header {
+        margin-bottom: 50px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin: 0 35px;
+
+        @media screen and (orientation: portrait) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    mat-card-actions {
+        margin: auto;
+        margin-bottom: 15px;
+    }
+}
