@@ -47,7 +47,7 @@ const groupUsers: User[] = [];
     styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-    readonly apiUrl = 'http://localhost:4000';
+    readonly apiUrl = 'https://perfectly-energetic-wolf-object.wayscript.cloud';
     readonly vapidPublicKey = 'BEY_lf7UsoVHunFKq9QiuID2rtEMvzTttrFughPSxC-wu5ip4PBAhSmXLonwHEa7hTQLuyCLF1Q76967h8StEIY';
 
     displayedColumns1: string[] = ['nazwa', 'akcja'];
