@@ -32,16 +32,23 @@ export class RegisterLoginComponent {
 
 
     async register(): Promise<void> {
-        fetch(this.apiUrl + '/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(this.registerForm.value)
-        })
-            .then(response => response.json())
-            .then(id => {
-                console.log(id);
-                this.router.navigate(['/app', id]);
+        if (this.registerForm.value.password != this.registerForm.value.password2) {
+            this._snackBar.open('Niepoprane dane!', 'Ok', {
+                horizontalPosition: 'center',
+                verticalPosition: 'bottom'
             });
+        } else {
+            fetch(this.apiUrl + '/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.registerForm.value)
+            })
+                .then(response => response.json())
+                .then(id => {
+                    console.log(id);
+                    this.router.navigate(['/app', id]);
+                });
+        }
     }
 
     async login(): Promise<void> {
