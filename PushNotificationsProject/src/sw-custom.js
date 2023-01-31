@@ -1,7 +1,5 @@
 self.addEventListener('fetch', function (event) {
-    if (event.request.url.includes('google') && !event.request.url.includes('calendar')) {
-        doAction(event);
-    }
+    doAction(event);
 });
 
 async function doAction(x) {
