@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
 
     title = 'PushNotificationsProject';
     readonly vapidPublicKey = 'BEY_lf7UsoVHunFKq9QiuID2rtEMvzTttrFughPSxC-wu5ip4PBAhSmXLonwHEa7hTQLuyCLF1Q76967h8StEIY';
-    readonly apiUrl = 'https://perfectly-energetic-wolf-object.wayscript.cloud/';
+    readonly apiUrl = 'https://perfectly-energetic-wolf-object.wayscript.cloud';
 
     registrationButton: boolean = false;
     unregistrationButton: boolean = true;
