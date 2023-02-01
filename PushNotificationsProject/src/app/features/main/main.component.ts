@@ -47,7 +47,7 @@ const groupUsers: User[] = [];
     styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-    readonly apiUrl = 'https://perfectly-energetic-wolf-object.wayscript.cloud';
+    readonly apiUrl = 'http://localhost:4000';
     readonly vapidPublicKey = 'BEY_lf7UsoVHunFKq9QiuID2rtEMvzTttrFughPSxC-wu5ip4PBAhSmXLonwHEa7hTQLuyCLF1Q76967h8StEIY';
 
     displayedColumns1: string[] = ['nazwa', 'akcja'];
@@ -123,12 +123,14 @@ export class MainComponent implements OnInit {
                 let tempGroupUsers: User[] = []
 
                 for (let user of chosenGroup.participants) {
-                    let currentUser = allUsers.find(u => u.id == user.userId)
-                    tempGroupUsers.push({
-                        id: user.userId,
-                        name: currentUser?.name + '',
-                        lastname: currentUser?.lastname + ''
-                    });
+                    if (user.accepted) {
+                        let currentUser = allUsers.find(u => u.id == user.userId)
+                        tempGroupUsers.push({
+                            id: user.userId,
+                            name: currentUser?.name + '',
+                            lastname: currentUser?.lastname + ''
+                        });
+                    }
                 }
 
                 this.dataSource4 = new MatTableDataSource(tempGroupUsers);
@@ -194,7 +196,7 @@ export class MainComponent implements OnInit {
                             group.canUserJoin = false;
                         }
 
-                        if (participant.userId != this.currentUserId && participant.accepted == false && participant.rejected == false) {
+                        if (group.authorId == this.currentUserId && participant.accepted == false && participant.rejected == false) {
                             group.canUserJoin = false;
                             let tempParticipant = allUsers.find(u => u.id == participant.userId);
                             tempGroupAcceptance.push({

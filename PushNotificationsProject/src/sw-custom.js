@@ -1,16 +1,3 @@
-self.addEventListener('fetch', function (event) {
-    doAction(event);
-});
-
-async function doAction(x) {
-    let headers = new Headers();
-    headers.append("Content-Security-Policy", "connect-src *;");
-    headers.append("Access-Control-Allow-Origin", "*");
-    x.respondWith(
-        fetch(x.request, { headers: headers, mode: 'no-cors' })
-    );
-}
-
 self.addEventListener('notificationclick', function (event) {
     console.log("Notification Clicked");
 

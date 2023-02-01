@@ -15,7 +15,7 @@ export class RegisterLoginComponent {
         private router: Router,
         private _snackBar: MatSnackBar) { }
 
-    readonly apiUrl = 'https://perfectly-energetic-wolf-object.wayscript.cloud';
+    readonly apiUrl = 'http://localhost:4000';
 
     registerForm = this.formBuilder.group({
         name: ['', [Validators.required]],

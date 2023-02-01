@@ -2,126 +2,146 @@
   "subscriptions": [
     {
       "sub": {
-        "endpoint": "https://fcm.googleapis.com/fcm/send/cTZAgy8cojc:APA91bGVURLQIM6YZ0OjCGzhCiRFNhIGPfOLGFIrSS7XIbyFZzyLLqKtfCrmdIZ86Gl3iKimOQM11fvJikGCRtU3Q9GKAVnGChg9g3qB5wDTQyrf8h-Canp2VVTisDR1lA97gcy5l5LE",
+        "endpoint": "https://fcm.googleapis.com/fcm/send/dieb1ndiepA:APA91bEs2Z-jxHush0upGXpkzGILPZyGK2pWo_045-PHTF3pTGrHUPNXaoA5s0uRQxH14_QU5xVsf4kg1TUwp6CY6WDllgXvKaIXJXpJUzF6c3F-IdcMjK5WYr1sbtw03lgsFyGvrXS8",
         "expirationTime": null,
         "keys": {
-          "p256dh": "BMFFwkahYOTsPXZr-7mBP1oOHtxhAJuUw4R2lHxOw7hjLyv4KeJeJ64miobwHEJMIZ_RKu5E2sNVKJmYIzNrXkc",
-          "auth": "CMwdX-yFIdBRq4yLNZEquw"
+          "p256dh": "BJj8MHinKuK0qifvn5xXlE9lXKVrEQy710shj0NcWCMUWGKvu2tlAjRahsPeSaycgi8QqP_PBVIXSkdG7YnLF80",
+          "auth": "A2jHG8Fg290QHzfgcIhtOA"
         }
       },
-      "userId": 1076859
+      "userId": 680772
     },
     {
       "sub": {
-        "endpoint": "https://fcm.googleapis.com/fcm/send/dP1Ztkk77pE:APA91bERiG8SybKfpeWuc7piFEd_4vusBY7yfruleCEgPCWKPDs5PqKvhWxKZYG6W8rNuiZ9v-yXQ2HxCt87FiFMCyj_2YU_eIHf5zLPWjI5Wyx-P50DXQ6gMY6qbdh2wWvbsIIjLkCL",
+        "endpoint": "https://wns2-am3p.notify.windows.com/w/?token=BQYAAADqAQ4dD8RozAwhzQH5rbE5RUcHRuT%2bckcmwZMgCM97%2f8WzbENvYDok%2fjj4LTaYoh8Etr%2bHfsq1OcgTYeDqu5NdQUyd%2ffPpb7nMMw04a6QoZY2aKOHoZ%2b5Zl%2bRZBOVCMgL1Op1OSSFzLvwhgb%2fSyrLVmg4NFm7LqQ7z%2bbWrYdBnyUJD9w0myzh%2fysMdJ3bJBNu6qaJV%2bCOkpTH08%2f9GKcwBzXTT50pkHrvl65uSskuhQP5tbOPlb%2fKxe%2fgqsvJEgDaa7F0xXhh2uLQwF6Lntvk9Hv8vXUZlbisCicc%2f88%2bAgHXlTTKlfufKTzWq9oH1jbk%3d",
         "expirationTime": null,
         "keys": {
-          "p256dh": "BO2BDHxLEpabWoc_d7PxsDesJ-6F9sF8HPrrNaL-YULq6LqOjfAipm6oS7oHdEjBKi0aoJ3CD6mNDhiADsbmPBc",
-          "auth": "Nw--8mVBPzDXhWH1L7sBQA"
+          "p256dh": "BGYUOJaPQVkeSAf6gB9AKTqMjMZD_eHw64L3dDWItYS0zn72se4epxsVw5ncusRiui5QshKyWKkgaJCsfKfI7ME",
+          "auth": "ypgfiRt8IezTha1kUM_5kQ"
         }
       },
-      "userId": 1076859
+      "userId": 589176
     },
     {
       "sub": {
-        "endpoint": "https://fcm.googleapis.com/fcm/send/eV1p0hsiUOE:APA91bGV1h5xDraMLLgcFNAVfF6gpNS3EaArFQASsbMphZFn3mX22-AeU8kXuH1wD5-AuWeJyANZrOlaK_C-7QnhHBUVq0UT0rafYzZjj-F-txvJErGIFx5ntwUo42YLWzWFVKtw58I7",
+        "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABj2V55633cOdT7GIzdNPb-OSrB_ah4iAV-5uQeWvy42-OotvFf5xm1oo1iYLPpJMpHmihxVmzD5mJzdlVZ2iw_k0eNIrcytSbx1WGAg6960PkGFr1Q9Gcqy51EZKS-cmPraO2mbHjL_4yPMwkNb1fzsj5F5NyCvsb3Mr97brL7nljOj4c",
         "expirationTime": null,
         "keys": {
-          "p256dh": "BEWt4ggRzd0FVT2JyipUS9l7wOaI0FpUWVQ_jhQkyepeAg6dIibf8zi1djtrVeXyaD-YbQvNfJnGS34AM447jxA",
-          "auth": "ooZFocZ8Bh-Ch1USJJnn_Q"
+          "auth": "Ck6FBrvcJY0ecXqdHeGWsw",
+          "p256dh": "BEFKBzeiJ_RS2TlydyymQAZN-d9m6WAWgwaGROteIks7iDQDLXhk3kC_-8kgMOXZwDOMyU2ap3ERyoOkcYCLTRc"
         }
       },
-      "userId": 1116220
+      "userId": 3619
+    },
+    {
+      "sub": {
+        "endpoint": "https://fcm.googleapis.com/fcm/send/ej5Fsr2lNMU:APA91bGqZrHC17SzpJxs34yqLSPnfqUQ0Lj_89J1z2zNCz4scKFT9qe7nV1XNRBpOkwhK_cfZwnN7wEuekj57KOrW_Didygn72O-lnWUku8bTMijJSbnb_XoVnFYWmN19tIZaNVfUR2p",
+        "expirationTime": null,
+        "keys": {
+          "p256dh": "BKucm_XorCs2swdM1T9axtPZlAcNqoFJh45eO3trNy2np-mBurA1cZAh1ea_QlTr3LvV8GmUQskD0_iwRZWT8PI",
+          "auth": "fifxMGkr3fWm-RDL8XAZyQ"
+        }
+      },
+      "userId": 782811
+    },
+    {
+      "sub": {
+        "endpoint": "https://fcm.googleapis.com/fcm/send/f4F8YQcZy6Q:APA91bGVuLpV0vPL8GR8xC-HdOyljz5DLb-7a4rHBWBI2M2VgheGeWLD2BYpqerW9wjVYuTRVx0OdH90gb7WWty1jRM_hWzUo9yn4-6bWK8FD47RevDkmr2EjiGK2fEW5iFyAwZdY7hg",
+        "expirationTime": null,
+        "keys": {
+          "p256dh": "BJoKgKR7nYTsTwJDnsGDrp4T1DVO9d7hSJL8PhRQejlQJ3Xunmk3ldxB40mxof9XZQcBFSqn4epF73sGorw6vC4",
+          "auth": "vlx99dD77P2u-8L_eArtzw"
+        }
+      },
+      "userId": 680772
     }
   ],
   "users": [
     {
-      "id": 1116220,
+      "id": 680772,
       "name": "Jan",
       "lastname": "Kowalski",
-      "login": "123",
-      "password": "123"
+      "login": "kowal123",
+      "password": "qwerty123"
     },
     {
-      "id": 1076859,
+      "id": 589176,
       "name": "Adam",
       "lastname": "Nowak",
-      "login": "qwe",
-      "password": "qwe"
+      "login": "nowak9",
+      "password": "abc999"
+    },
+    {
+      "id": 3619,
+      "name": "Ewa",
+      "lastname": "Wiśniewska",
+      "login": "fajna-ewcia",
+      "password": "tajnehaslo123"
+    },
+    {
+      "id": 782811,
+      "name": "Adam",
+      "lastname": "Małysz",
+      "login": "dobryskoczek123",
+      "password": "password123"
     }
   ],
   "groups": [
     {
-      "id": 9204950,
-      "name": "znajomi",
+      "id": 337914,
+      "name": "Najlepsi znajomi Janka!!!",
       "participants": [
         {
-          "userId": 1076859,
+          "userId": 589176,
           "accepted": true,
           "rejected": false
-        }
-      ],
-      "authorId": 1116220
-    },
-    {
-      "id": 6528531,
-      "name": "rodzina",
-      "participants": [
+        },
         {
-          "userId": 1076859,
+          "userId": 3619,
+          "accepted": true,
+          "rejected": false
+        },
+        {
+          "userId": 782811,
           "accepted": false,
           "rejected": true
         }
       ],
-      "authorId": 1116220
+      "authorId": 680772
     },
     {
-      "id": 9204951,
-      "name": "xyz",
+      "id": 823374,
+      "name": "Rodzina Janka K",
       "participants": [
         {
-          "userId": 1116220,
+          "userId": 3619,
           "accepted": true,
           "rejected": false
-        }
-      ],
-      "authorId": 1076859
-    },
-    {
-      "id": 9156582,
-      "name": "123",
-      "participants": [
+        },
         {
-          "userId": 1076859,
+          "userId": 782811,
           "accepted": false,
           "rejected": false
         }
       ],
-      "authorId": 1116220
+      "authorId": 680772
     },
     {
-      "id": 787578,
-      "name": "dsadasdasd",
-      "participants": [],
-      "authorId": 1116220
-    },
-    {
-      "id": 485793,
-      "name": "czxcxzcz",
-      "participants": [],
-      "authorId": 1116220
-    },
-    {
-      "id": 878540,
-      "name": "czxcxzcz123",
-      "participants": [],
-      "authorId": 1116220
-    },
-    {
-      "id": 884293,
-      "name": "dasdasdas123",
-      "participants": [],
-      "authorId": 1116220
+      "id": 436487,
+      "name": "Spotkanie kuzynów x",
+      "participants": [
+        {
+          "userId": 680772,
+          "accepted": false,
+          "rejected": false
+        },
+        {
+          "userId": 782811,
+          "accepted": false,
+          "rejected": false
+        }
+      ],
+      "authorId": 3619
     }
   ]
 }

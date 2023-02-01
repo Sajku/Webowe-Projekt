@@ -11,7 +11,6 @@ mat-card {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    background-color: #222831;
 
     &-card {
         width: 100%;
@@ -98,6 +97,11 @@ mat-card {
     height: 50%;
 }
 
+.noLeftPadding {
+    padding-left: 0 !important;
+    padding-bottom: 15px !important;
+}
+
 @media screen and (orientation: portrait) {
     .main {
         align-items: center;
@@ -121,5 +125,9 @@ mat-card {
             justify-content: center;
             flex-direction: column;
         }
+    }
+
+    .marginBottom15 {
+        margin-bottom: 30px;
     }
 }
